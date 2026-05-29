@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск лучших цен - Ozon, Avito, Wildberries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Поиск лучших цен</h1>
+            <p class="subtitle">Находим товары на Ozon, Avito и Wildberries с учётом репутации продавца</p>
+        </header>
+
+        <div class="search-section">
+            <form id="searchForm" class="search-form">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Введите название товара..." 
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" class="search-btn">Найти</button>
+            </form>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Ищем лучшие цены и проверяем репутацию продавцов...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>Найдено вариантов: <span id="resultsCount">3</span></h2>
+            <div id="productsGrid" class="products-grid"></div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
