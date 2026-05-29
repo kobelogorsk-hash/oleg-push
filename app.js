@@ -8,31 +8,29 @@ const CONFIG = {
             name: 'Ozon',
             baseUrl: 'https://www.ozon.ru',
             // Возвращает только параметры фильтра (хвост URL) для категории/поиска
-            // Фильтр: дешевле 10000 руб
+            // Фильтр: цена до 10000 руб, сортировка от дешевых к дорогим
             // Пример использования: baseUrl + '/category/smartfony-15502/' + getFilterSuffix()
-            // Результат: https://www.ozon.ru/category/smartfony-15502/?from=0&to=10000
-            getFilterSuffix: () => '?from=0&to=10000',
+            // Результат: https://www.ozon.ru/category/smartfony-15502/?currency_price=448.000%3B10000.000&from=0&to=10000&sorting=price
+            getFilterSuffix: () => '?currency_price=448.000%3B10000.000&from=0&to=10000&sorting=price',
             color: '#005bff'
-        },
-        avito: {
-            name: 'Avito',
-            baseUrl: 'https://www.avito.ru',
-            // Возвращает только параметры фильтра (хвост URL)
-            // Фильтр: цена от 2500 до 12500 руб
-            // Пример использования: baseUrl + '/rossiya' + getFilterSuffix()
-            // Результат: https://www.avito.ru/rossiya?f=price%3A2500-12500
-            getFilterSuffix: () => '?f=price%3A2500-12500',
-            color: '#00aa00'
         },
         wildberries: {
             name: 'Wildberries',
             baseUrl: 'https://www.wildberries.ru',
             // Возвращает только параметры фильтра (хвост URL)
-            // Фильтр: цена от 2500 до 10000 руб + доставка до 5 дней
+            // Фильтр: цена до 10000 руб, сортировка от дешевых к дорогим
             // Пример использования: baseUrl + '/catalog/0/search.aspx' + getFilterSuffix()
-            // Результат: https://www.wildberries.ru/catalog/0/search.aspx?priceU=2500%3B10000&deliveryDays=5&meta_charcs=true
-            getFilterSuffix: () => '?priceU=2500%3B10000&deliveryDays=5&meta_charcs=true',
+            // Результат: https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=priceup&search=телефон&priceU=3300%3B1000000&meta_charcs=true
+            getFilterSuffix: () => '?page=1&sort=priceup&search=%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD&priceU=3300%3B1000000&meta_charcs=true',
             color: '#cb11ab'
+        },
+        yandex: {
+            name: 'Яндекс Маркет',
+            baseUrl: 'https://market.yandex.ru',
+            // Возвращает только параметры фильтра (хвост URL)
+            // Фильтр: цена до 10000 руб, сортировка от дешевых к дорогим
+            getFilterSuffix: () => '?price=0%3A10000&how=price',
+            color: '#fc3f1d'
         }
     }
 };
@@ -72,15 +70,15 @@ const mockProducts = {
             id: 3,
             title: 'Apple iPhone 14 128GB Midnight',
             price: 72000,
-            marketplace: 'avito',
+            marketplace: 'yandex',
             seller: {
-                name: 'МобилТорг',
-                rating: 4.5,
-                reviews: 2340,
-                reputation: 'average'
+                name: 'Яндекс Маркет Официальный',
+                rating: 4.8,
+                reviews: 12340,
+                reputation: 'good'
             },
-            image: 'https://a.avito.st/i/original/1/65/16543210987654321.jpg',
-            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
+            image: 'https://avatars.mds.yandex.net/get-altouch/1234567/abc123def456',
+            url: CONFIG.marketplaces.yandex.baseUrl + '/search' + CONFIG.marketplaces.yandex.getFilterSuffix()
         }
     ],
     'ноутбук': [
@@ -116,15 +114,15 @@ const mockProducts = {
             id: 6,
             title: 'Lenovo IdeaPad 5 Pro 16 Ryzen 7/16/512',
             price: 65000,
-            marketplace: 'avito',
+            marketplace: 'yandex',
             seller: {
                 name: 'Компьютерный Мир',
-                rating: 4.3,
-                reviews: 1890,
-                reputation: 'average'
+                rating: 4.5,
+                reviews: 2890,
+                reputation: 'good'
             },
-            image: 'https://a.avito.st/i/original/2/34/23456789012345678.jpg',
-            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
+            image: 'https://avatars.mds.yandex.net/get-altouch/2345678/def456ghi789',
+            url: CONFIG.marketplaces.yandex.baseUrl + '/search' + CONFIG.marketplaces.yandex.getFilterSuffix()
         }
     ],
     'наушники': [
@@ -160,15 +158,15 @@ const mockProducts = {
             id: 9,
             title: 'JBL Tune 760NC Wireless Over-Ear',
             price: 8500,
-            marketplace: 'avito',
+            marketplace: 'yandex',
             seller: {
                 name: 'AudioExpert',
-                rating: 4.2,
-                reviews: 980,
-                reputation: 'average'
+                rating: 4.4,
+                reviews: 1980,
+                reputation: 'good'
             },
-            image: 'https://a.avito.st/i/original/3/45/34567890123456789.jpg',
-            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
+            image: 'https://avatars.mds.yandex.net/get-altouch/3456789/ghi789jkl012',
+            url: CONFIG.marketplaces.yandex.baseUrl + '/search' + CONFIG.marketplaces.yandex.getFilterSuffix()
         }
     ]
 };
@@ -229,9 +227,9 @@ async function searchProducts(query) {
 // Генерация демо-данных для произвольного запроса
 function generateDemoProducts(query) {
     const prices = [
-        { price: Math.floor(Math.random() * 5000) + 1000, marketplace: 'avito', reputation: 'average' },
         { price: Math.floor(Math.random() * 7000) + 2000, marketplace: 'ozon', reputation: 'good' },
-        { price: Math.floor(Math.random() * 6000) + 1500, marketplace: 'wildberries', reputation: 'good' }
+        { price: Math.floor(Math.random() * 6000) + 1500, marketplace: 'wildberries', reputation: 'good' },
+        { price: Math.floor(Math.random() * 6500) + 1800, marketplace: 'yandex', reputation: 'good' }
     ];
 
     return prices.map((item, index) => {
@@ -243,8 +241,8 @@ function generateDemoProducts(query) {
             categoryPath = '/category/smartfony-15502/';
         } else if (item.marketplace === 'wildberries') {
             categoryPath = '/catalog/0/search.aspx';
-        } else if (item.marketplace === 'avito') {
-            categoryPath = '/rossiya';
+        } else if (item.marketplace === 'yandex') {
+            categoryPath = '/search';
         }
         
         const fullUrl = mpConfig.baseUrl + categoryPath + mpConfig.getFilterSuffix();
@@ -399,4 +397,4 @@ searchInput.addEventListener('keypress', (e) => {
 
 // Приветственное сообщение в консоли
 console.log('%c🔍 Поиск лучших цен запущен!', 'color: #667eea; font-size: 16px; font-weight: bold;');
-console.log('%cВведите название товара для поиска на Ozon, Avito и Wildberries', 'color: #764ba2; font-size: 12px;');
+console.log('%cВведите название товара для поиска на Ozon, Wildberries и Яндекс Маркет', 'color: #764ba2; font-size: 12px;');
