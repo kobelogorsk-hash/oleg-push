@@ -2,30 +2,36 @@
 // В реальном проекте здесь должны быть URL ваших backend API
 
 const CONFIG = {
-    // Базовые URL маркетплейсов для формирования ссылок
+    // Базовые URL маркетплейсов и функции для получения хвоста URL с фильтрами
     marketplaces: {
         ozon: {
             name: 'Ozon',
-            baseUrl: 'https://www.ozon.ru/search/?text=',
-            // Фильтр на дешевые товары (до 10000 руб)
-            // Формат URL: https://www.ozon.ru/category/smartfony-15502/?sorting=price&text=телефон&from=0&to=10000
-            getFilterUrl: (query) => `https://www.ozon.ru/category/smartfony-15502/?sorting=price&text=${encodeURIComponent(query)}&from=0&to=10000`,
+            baseUrl: 'https://www.ozon.ru',
+            // Возвращает только параметры фильтра (хвост URL) для категории/поиска
+            // Фильтр: дешевле 10000 руб
+            // Пример использования: baseUrl + '/category/smartfony-15502/' + getFilterSuffix()
+            // Результат: https://www.ozon.ru/category/smartfony-15502/?from=0&to=10000
+            getFilterSuffix: () => '?from=0&to=10000',
             color: '#005bff'
         },
         avito: {
             name: 'Avito',
-            baseUrl: 'https://www.avito.ru/',
-            // Avito не поддерживает фильтры цен через URL параметры
-            // Открываем главную страницу с поисковым запросом
-            getFilterUrl: (query) => `https://www.avito.ru/?q=${encodeURIComponent(query)}`,
+            baseUrl: 'https://www.avito.ru',
+            // Возвращает только параметры фильтра (хвост URL)
+            // Фильтр: цена от 2500 до 12500 руб
+            // Пример использования: baseUrl + '/rossiya' + getFilterSuffix()
+            // Результат: https://www.avito.ru/rossiya?f=price%3A2500-12500
+            getFilterSuffix: () => '?f=price%3A2500-12500',
             color: '#00aa00'
         },
         wildberries: {
             name: 'Wildberries',
-            baseUrl: 'https://www.wildberries.ru/catalog/0/search.aspx?search=',
-            // Фильтр цены от 2500 до 10000 рублей + доставка до 5 дней
-            // Формат URL: https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search=телефон&priceU=2500%3B10000&meta_charcs=true&deliveryDays=5
-            getFilterUrl: (query) => `https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search=${encodeURIComponent(query)}&priceU=2500%3B10000&meta_charcs=true&deliveryDays=5`,
+            baseUrl: 'https://www.wildberries.ru',
+            // Возвращает только параметры фильтра (хвост URL)
+            // Фильтр: цена от 2500 до 10000 руб + доставка до 5 дней
+            // Пример использования: baseUrl + '/catalog/0/search.aspx' + getFilterSuffix()
+            // Результат: https://www.wildberries.ru/catalog/0/search.aspx?priceU=2500%3B10000&deliveryDays=5&meta_charcs=true
+            getFilterSuffix: () => '?priceU=2500%3B10000&deliveryDays=5&meta_charcs=true',
             color: '#cb11ab'
         }
     }
@@ -46,7 +52,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://ir.ozone.ru/s3/multimedia-y/wc1000/165268877298250300.jpg',
-            url: CONFIG.marketplaces.ozon.getFilterUrl('iPhone 14 Pro')
+            url: CONFIG.marketplaces.ozon.baseUrl + '/category/smartfony-15502/' + CONFIG.marketplaces.ozon.getFilterSuffix()
         },
         {
             id: 2,
@@ -60,7 +66,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://basket-14.wbbasket.ru/vol2445/part244525/244525123/images/big/1.webp',
-            url: CONFIG.marketplaces.wildberries.getFilterUrl('iPhone 14 Pro Max')
+            url: CONFIG.marketplaces.wildberries.baseUrl + '/catalog/0/search.aspx' + CONFIG.marketplaces.wildberries.getFilterSuffix()
         },
         {
             id: 3,
@@ -74,7 +80,7 @@ const mockProducts = {
                 reputation: 'average'
             },
             image: 'https://a.avito.st/i/original/1/65/16543210987654321.jpg',
-            url: CONFIG.marketplaces.avito.getFilterUrl('iPhone 14')
+            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
         }
     ],
     'ноутбук': [
@@ -90,7 +96,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://ir.ozone.ru/s3/multimedia-x/wc1000/168329456789012345.jpg',
-            url: CONFIG.marketplaces.ozon.getFilterUrl('MacBook Air M2')
+            url: CONFIG.marketplaces.ozon.baseUrl + '/category/smartfony-15502/' + CONFIG.marketplaces.ozon.getFilterSuffix()
         },
         {
             id: 5,
@@ -104,7 +110,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://basket-09.wbbasket.ru/vol1234/part123456/123456789/images/big/1.webp',
-            url: CONFIG.marketplaces.wildberries.getFilterUrl('ASUS ZenBook 14')
+            url: CONFIG.marketplaces.wildberries.baseUrl + '/catalog/0/search.aspx' + CONFIG.marketplaces.wildberries.getFilterSuffix()
         },
         {
             id: 6,
@@ -118,7 +124,7 @@ const mockProducts = {
                 reputation: 'average'
             },
             image: 'https://a.avito.st/i/original/2/34/23456789012345678.jpg',
-            url: CONFIG.marketplaces.avito.getFilterUrl('Lenovo IdeaPad 5 Pro')
+            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
         }
     ],
     'наушники': [
@@ -134,7 +140,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://ir.ozone.ru/s3/multimedia-z/wc1000/169876543210987654.jpg',
-            url: CONFIG.marketplaces.ozon.getFilterUrl('Sony WH-1000XM5')
+            url: CONFIG.marketplaces.ozon.baseUrl + '/category/smartfony-15502/' + CONFIG.marketplaces.ozon.getFilterSuffix()
         },
         {
             id: 8,
@@ -148,7 +154,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://basket-11.wbbasket.ru/vol5678/part567890/567890123/images/big/1.webp',
-            url: CONFIG.marketplaces.wildberries.getFilterUrl('AirPods Pro 2')
+            url: CONFIG.marketplaces.wildberries.baseUrl + '/catalog/0/search.aspx' + CONFIG.marketplaces.wildberries.getFilterSuffix()
         },
         {
             id: 9,
@@ -162,7 +168,7 @@ const mockProducts = {
                 reputation: 'average'
             },
             image: 'https://a.avito.st/i/original/3/45/34567890123456789.jpg',
-            url: CONFIG.marketplaces.avito.getFilterUrl('JBL Tune 760NC')
+            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
         }
     ]
 };
@@ -227,21 +233,37 @@ function generateDemoProducts(query) {
         { price: Math.floor(Math.random() * 7000) + 2000, marketplace: 'ozon', reputation: 'good' },
         { price: Math.floor(Math.random() * 6000) + 1500, marketplace: 'wildberries', reputation: 'good' }
     ];
-    
-    return prices.map((item, index) => ({
-        id: Date.now() + index,
-        title: `${query} - вариант ${index + 1}`,
-        price: item.price,
-        marketplace: item.marketplace,
-        seller: {
-            name: `Продавец ${String.fromCharCode(65 + index)}`,
-            rating: item.reputation === 'good' ? (4.5 + Math.random() * 0.5).toFixed(1) : (3.5 + Math.random() * 0.8).toFixed(1),
-            reviews: Math.floor(Math.random() * 5000) + 100,
-            reputation: item.reputation
-        },
-        image: `https://picsum.photos/seed/${query}${index}/400/300`,
-        url: CONFIG.marketplaces[item.marketplace].getFilterUrl(query)
-    }));
+
+    return prices.map((item, index) => {
+        const mpConfig = CONFIG.marketplaces[item.marketplace];
+        // Формируем URL: baseUrl + путь категории/поиска + хвост фильтра
+        // Для демонстрации используем разные пути в зависимости от маркетплейса
+        let categoryPath = '';
+        if (item.marketplace === 'ozon') {
+            categoryPath = '/category/smartfony-15502/';
+        } else if (item.marketplace === 'wildberries') {
+            categoryPath = '/catalog/0/search.aspx';
+        } else if (item.marketplace === 'avito') {
+            categoryPath = '/rossiya';
+        }
+        
+        const fullUrl = mpConfig.baseUrl + categoryPath + mpConfig.getFilterSuffix();
+        
+        return {
+            id: Date.now() + index,
+            title: `${query} - вариант ${index + 1}`,
+            price: item.price,
+            marketplace: item.marketplace,
+            seller: {
+                name: `Продавец ${String.fromCharCode(65 + index)}`,
+                rating: item.reputation === 'good' ? (4.5 + Math.random() * 0.5).toFixed(1) : (3.5 + Math.random() * 0.8).toFixed(1),
+                reviews: Math.floor(Math.random() * 5000) + 100,
+                reputation: item.reputation
+            },
+            image: `https://picsum.photos/seed/${query}${index}/400/300`,
+            url: fullUrl
+        };
+    });
 }
 
 // Сортировка товаров по цене и репутации
