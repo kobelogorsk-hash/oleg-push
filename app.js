@@ -8,21 +8,24 @@ const CONFIG = {
             name: 'Ozon',
             baseUrl: 'https://www.ozon.ru/search/?text=',
             // Фильтр на дешевые товары (до 10000 руб)
-            getFilterUrl: (query) => `https://www.ozon.ru/search/?text=${encodeURIComponent(query)}&price_to=10000`,
+            // Формат URL: https://www.ozon.ru/category/smartfony-15502/?sorting=price&text=телефон&from=0&to=10000
+            getFilterUrl: (query) => `https://www.ozon.ru/category/smartfony-15502/?sorting=price&text=${encodeURIComponent(query)}&from=0&to=10000`,
             color: '#005bff'
         },
         avito: {
             name: 'Avito',
-            baseUrl: 'https://www.avito.ru/search?q=',
-            // Фильтр цены от 2500 до 12500 рублей
-            getFilterUrl: (query) => `https://www.avito.ru/search?q=${encodeURIComponent(query)}&pmin=2500&pmax=12500`,
+            baseUrl: 'https://www.avito.ru/',
+            // Avito не поддерживает фильтры цен через URL параметры
+            // Открываем главную страницу с поисковым запросом
+            getFilterUrl: (query) => `https://www.avito.ru/?q=${encodeURIComponent(query)}`,
             color: '#00aa00'
         },
         wildberries: {
             name: 'Wildberries',
             baseUrl: 'https://www.wildberries.ru/catalog/0/search.aspx?search=',
             // Фильтр цены от 2500 до 10000 рублей + доставка до 5 дней
-            getFilterUrl: (query) => `https://www.wildberries.ru/catalog/0/search.aspx?search=${encodeURIComponent(query)}&priceFrom=2500&priceTo=10000&deliveryDays=5`,
+            // Формат URL: https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search=телефон&priceU=2500%3B10000&meta_charcs=true&deliveryDays=5
+            getFilterUrl: (query) => `https://www.wildberries.ru/catalog/0/search.aspx?page=1&sort=popular&search=${encodeURIComponent(query)}&priceU=2500%3B10000&meta_charcs=true&deliveryDays=5`,
             color: '#cb11ab'
         }
     }
