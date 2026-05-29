@@ -336,6 +336,8 @@ header {
 
 .price-range {
     margin-bottom: 25px;
+    padding-right: 10px;
+    overflow: hidden;
 }
 
 .range-inputs {
@@ -347,6 +349,7 @@ header {
 
 .range-inputs input[type="number"] {
     flex: 1;
+    min-width: 0;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 8px;
