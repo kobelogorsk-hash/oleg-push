@@ -178,12 +178,12 @@ header h1 {
     background: #005bff;
 }
 
-.marketplace-badge.avito {
-    background: #00aa00;
-}
-
 .marketplace-badge.wildberries {
     background: #cb11ab;
+}
+
+.marketplace-badge.yandex {
+    background: #fc3f1d;
 }
 
 .seller-info {
