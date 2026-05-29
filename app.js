@@ -7,16 +7,22 @@ const CONFIG = {
         ozon: {
             name: 'Ozon',
             baseUrl: 'https://www.ozon.ru/search/?text=',
+            // Фильтр на дешевые товары (до 10000 руб)
+            getFilterUrl: (query) => `https://www.ozon.ru/search/?text=${encodeURIComponent(query)}&price_to=10000`,
             color: '#005bff'
         },
         avito: {
             name: 'Avito',
             baseUrl: 'https://www.avito.ru/search?q=',
+            // Фильтр цены от 2500 до 12500 рублей
+            getFilterUrl: (query) => `https://www.avito.ru/search?q=${encodeURIComponent(query)}&pmin=2500&pmax=12500`,
             color: '#00aa00'
         },
         wildberries: {
             name: 'Wildberries',
             baseUrl: 'https://www.wildberries.ru/catalog/0/search.aspx?search=',
+            // Фильтр цены от 2500 до 10000 рублей + доставка до 5 дней
+            getFilterUrl: (query) => `https://www.wildberries.ru/catalog/0/search.aspx?search=${encodeURIComponent(query)}&priceFrom=2500&priceTo=10000&deliveryDays=5`,
             color: '#cb11ab'
         }
     }
@@ -37,7 +43,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://ir.ozone.ru/s3/multimedia-y/wc1000/165268877298250300.jpg',
-            url: 'https://www.ozon.ru/product/apple-iphone-14-pro-128gb-deep-purple-123456/'
+            url: CONFIG.marketplaces.ozon.getFilterUrl('iPhone 14 Pro')
         },
         {
             id: 2,
@@ -51,7 +57,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://basket-14.wbbasket.ru/vol2445/part244525/244525123/images/big/1.webp',
-            url: 'https://www.wildberries.ru/catalog/12345678/detail.aspx'
+            url: CONFIG.marketplaces.wildberries.getFilterUrl('iPhone 14 Pro Max')
         },
         {
             id: 3,
@@ -65,7 +71,7 @@ const mockProducts = {
                 reputation: 'average'
             },
             image: 'https://a.avito.st/i/original/1/65/16543210987654321.jpg',
-            url: 'https://www.avito.ru/telefony/iphone_14_123456'
+            url: CONFIG.marketplaces.avito.getFilterUrl('iPhone 14')
         }
     ],
     'ноутбук': [
@@ -81,7 +87,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://ir.ozone.ru/s3/multimedia-x/wc1000/168329456789012345.jpg',
-            url: 'https://www.ozon.ru/product/macbook-air-13-m2-123456/'
+            url: CONFIG.marketplaces.ozon.getFilterUrl('MacBook Air M2')
         },
         {
             id: 5,
@@ -95,7 +101,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://basket-09.wbbasket.ru/vol1234/part123456/123456789/images/big/1.webp',
-            url: 'https://www.wildberries.ru/catalog/87654321/detail.aspx'
+            url: CONFIG.marketplaces.wildberries.getFilterUrl('ASUS ZenBook 14')
         },
         {
             id: 6,
@@ -109,7 +115,7 @@ const mockProducts = {
                 reputation: 'average'
             },
             image: 'https://a.avito.st/i/original/2/34/23456789012345678.jpg',
-            url: 'https://www.avito.ru/noutbuki/lenovo_ideapad_234567'
+            url: CONFIG.marketplaces.avito.getFilterUrl('Lenovo IdeaPad 5 Pro')
         }
     ],
     'наушники': [
@@ -125,7 +131,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://ir.ozone.ru/s3/multimedia-z/wc1000/169876543210987654.jpg',
-            url: 'https://www.ozon.ru/product/sony-wh-1000xm5-123456/'
+            url: CONFIG.marketplaces.ozon.getFilterUrl('Sony WH-1000XM5')
         },
         {
             id: 8,
@@ -139,7 +145,7 @@ const mockProducts = {
                 reputation: 'good'
             },
             image: 'https://basket-11.wbbasket.ru/vol5678/part567890/567890123/images/big/1.webp',
-            url: 'https://www.wildberries.ru/catalog/11223344/detail.aspx'
+            url: CONFIG.marketplaces.wildberries.getFilterUrl('AirPods Pro 2')
         },
         {
             id: 9,
@@ -153,7 +159,7 @@ const mockProducts = {
                 reputation: 'average'
             },
             image: 'https://a.avito.st/i/original/3/45/34567890123456789.jpg',
-            url: 'https://www.avito.ru/audio/jbl_tune_345678'
+            url: CONFIG.marketplaces.avito.getFilterUrl('JBL Tune 760NC')
         }
     ]
 };
@@ -231,7 +237,7 @@ function generateDemoProducts(query) {
             reputation: item.reputation
         },
         image: `https://picsum.photos/seed/${query}${index}/400/300`,
-        url: `${CONFIG.marketplaces[item.marketplace].baseUrl}${encodeURIComponent(query)}`
+        url: CONFIG.marketplaces[item.marketplace].getFilterUrl(query)
     }));
 }
 
