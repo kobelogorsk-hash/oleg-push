@@ -9,7 +9,15 @@ const games = {
     pathofexile: { name: 'Path of Exile', icon: '💀' },
     escape: { name: 'Escape from Tarkov', icon: '🎯' },
     genshin: { name: 'Genshin Impact', icon: '✨' },
-    lineage: { name: 'Lineage 2', icon: '🏰' }
+    lineage: { name: 'Lineage 2', icon: '🏰' },
+    albion: { name: 'Albion Online', icon: '🗡️' },
+    destiny2: { name: 'Destiny 2', icon: '🌌' },
+    warframe: { name: 'Warframe', icon: '🤖' },
+    diablo4: { name: 'Diablo IV', icon: '😈' },
+    ff14: { name: 'Final Fantasy XIV', icon: '🐉' },
+    poe2: { name: 'Path of Exile 2', icon: '💎' },
+    throne: { name: 'Throne and Liberty', icon: '👑' },
+    once: { name: 'Once Human', icon: '🧟' }
 };
 
 // Категории товаров
@@ -354,6 +362,242 @@ const products = [
         seller: sellers[0],
         image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
         description: 'Большой пакет золота со скидкой'
+    },
+    
+    // Albion Online
+    {
+        id: 31,
+        title: '10000 Серебра Albion',
+        game: 'albion',
+        category: 'currency',
+        price: 380,
+        seller: sellers[3],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Серебро на любом сервере, быстрая доставка'
+    },
+    {
+        id: 32,
+        title: 'Premium статус 30 дней',
+        game: 'albion',
+        category: 'services',
+        price: 1200,
+        seller: sellers[7],
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        description: 'Активация премиум статуса на месяц'
+    },
+    {
+        id: 33,
+        title: 'Аккаунт 2000 IP, полный сет',
+        game: 'albion',
+        category: 'accounts',
+        price: 4500,
+        seller: sellers[5],
+        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        description: 'Развитый аккаунт с экипировкой'
+    },
+    
+    // Destiny 2
+    {
+        id: 34,
+        title: '1000 Света (Bright Dust)',
+        game: 'destiny2',
+        category: 'currency',
+        price: 450,
+        seller: sellers[0],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Валюта для покупки косметики'
+    },
+    {
+        id: 35,
+        title: 'Буст Power Level до 1800',
+        game: 'destiny2',
+        category: 'boosting',
+        price: 3200,
+        seller: sellers[6],
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        description: 'Прокачка уровня силы'
+    },
+    {
+        id: 36,
+        title: 'Exotic оружие на выбор',
+        game: 'destiny2',
+        category: 'items',
+        price: 1800,
+        seller: sellers[4],
+        image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?w=400&h=300&fit=crop',
+        description: 'Любое экзотическое оружие'
+    },
+    
+    // Warframe
+    {
+        id: 37,
+        title: '500 Платины Warframe',
+        game: 'warframe',
+        category: 'currency',
+        price: 650,
+        seller: sellers[3],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Премиум валюта для покупок'
+    },
+    {
+        id: 38,
+        title: 'Warframe Baruuk Prime',
+        game: 'warframe',
+        category: 'items',
+        price: 2200,
+        seller: sellers[1],
+        image: 'https://images.unsplash.com/photo-1642430065844-7c2dc8a7ab2a?w=400&h=300&fit=crop',
+        description: 'Прайм варфрейм в комплекте'
+    },
+    {
+        id: 39,
+        title: 'Фарм ресурсов (1 неделя)',
+        game: 'warframe',
+        category: 'services',
+        price: 900,
+        seller: sellers[7],
+        image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&h=300&fit=crop',
+        description: 'Ежедневный фарм ресурсов и кредитов'
+    },
+    
+    // Diablo IV
+    {
+        id: 40,
+        title: '1000000 Золота Diablo 4',
+        game: 'diablo4',
+        category: 'currency',
+        price: 1500,
+        seller: sellers[0],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Золото для любых нужд'
+    },
+    {
+        id: 41,
+        title: 'Буст до 100 уровня',
+        game: 'diablo4',
+        category: 'boosting',
+        price: 4800,
+        seller: sellers[2],
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        description: 'Максимальный уровень за вас'
+    },
+    {
+        id: 42,
+        title: 'Легендарный сет на класс',
+        game: 'diablo4',
+        category: 'items',
+        price: 3500,
+        seller: sellers[4],
+        image: 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=400&h=300&fit=crop',
+        description: 'Полный комплект легендарок'
+    },
+    
+    // Final Fantasy XIV
+    {
+        id: 43,
+        title: '1000000 Гил FFXIV',
+        game: 'ff14',
+        category: 'currency',
+        price: 890,
+        seller: sellers[3],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Игровая валюта Gil'
+    },
+    {
+        id: 44,
+        title: 'Буст Job до 90 уровня',
+        game: 'ff14',
+        category: 'boosting',
+        price: 2800,
+        seller: sellers[6],
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        description: 'Прокачка любой профессии'
+    },
+    {
+        id: 45,
+        title: 'Редкий маунт "Феникс"',
+        game: 'ff14',
+        category: 'items',
+        price: 4200,
+        seller: sellers[1],
+        image: 'https://images.unsplash.com/photo-1642430065844-7c2dc8a7ab2a?w=400&h=300&fit=crop',
+        description: 'Эксклюзивный транспорт'
+    },
+    
+    // Path of Exile 2
+    {
+        id: 46,
+        title: '50 Divine Orbs PoE 2',
+        game: 'poe2',
+        category: 'currency',
+        price: 2100,
+        seller: sellers[3],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Валюта для крафта'
+    },
+    {
+        id: 47,
+        title: 'Буст 100 уровней PoE 2',
+        game: 'poe2',
+        category: 'boosting',
+        price: 2900,
+        seller: sellers[2],
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        description: 'Быстрый подъем уровня'
+    },
+    
+    // Throne and Liberty
+    {
+        id: 48,
+        title: '100000 Солариумов T&L',
+        game: 'throne',
+        category: 'currency',
+        price: 720,
+        seller: sellers[0],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Основная валюта игры'
+    },
+    {
+        id: 49,
+        title: 'Буст уровня персонажа 50+',
+        game: 'throne',
+        category: 'boosting',
+        price: 3800,
+        seller: sellers[6],
+        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        description: 'Прокачка до максимального уровня'
+    },
+    
+    // Once Human
+    {
+        id: 50,
+        title: '5000 Стекловидных слитков',
+        game: 'once',
+        category: 'currency',
+        price: 580,
+        seller: sellers[7],
+        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        description: 'Редкая валюта для крафта'
+    },
+    {
+        id: 51,
+        title: 'Легендарное оружие',
+        game: 'once',
+        category: 'items',
+        price: 2400,
+        seller: sellers[4],
+        image: 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=400&h=300&fit=crop',
+        description: 'Мощное оружие для выживания'
+    },
+    {
+        id: 52,
+        title: 'Базовая помощь в развитии',
+        game: 'once',
+        category: 'services',
+        price: 950,
+        seller: sellers[7],
+        image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&h=300&fit=crop',
+        description: 'Помощь в старте и развитии базы'
     }
 ];
 
@@ -361,7 +605,7 @@ const products = [
 let state = {
     cart: [],
     currentCategory: 'all',
-    selectedGames: ['wow', 'cs2', 'dota2', 'lostark', 'pathofexile', 'escape', 'genshin', 'lineage'],
+    selectedGames: ['wow', 'cs2', 'dota2', 'lostark', 'pathofexile', 'escape', 'genshin', 'lineage', 'albion', 'destiny2', 'warframe', 'diablo4', 'ff14', 'poe2', 'throne', 'once'],
     minPrice: 0,
     maxPrice: 100000,
     minRating: 0,
