@@ -451,6 +451,92 @@ const mockProducts = {
             image: 'https://a.avito.st/i/original/9/01/90123456789012345.jpg',
             url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
         }
+    ],
+    'товары': [
+        {
+            id: 30,
+            title: 'Умная колонка Яндекс Станция Макс 2',
+            price: 29990,
+            marketplace: 'ozon',
+            seller: {
+                name: 'Яндекс Маркет',
+                rating: 4.9,
+                reviews: 23450,
+                reputation: 'good'
+            },
+            image: 'https://ir.ozone.ru/s3/multimedia-i/wc1000/170901234567890123.jpg',
+            url: CONFIG.marketplaces.ozon.baseUrl + '/category/smart-speakers-15502/' + CONFIG.marketplaces.ozon.getFilterSuffix()
+        },
+        {
+            id: 31,
+            title: 'Робот-пылесос Xiaomi Robot Vacuum S10',
+            price: 24990,
+            marketplace: 'wildberries',
+            seller: {
+                name: 'Xiaomi Home Store',
+                rating: 4.8,
+                reviews: 12340,
+                reputation: 'good'
+            },
+            image: 'https://basket-18.wbbasket.ru/vol2345/part234567/234567891/images/big/1.webp',
+            url: CONFIG.marketplaces.wildberries.baseUrl + '/catalog/0/search.aspx' + CONFIG.marketplaces.wildberries.getFilterSuffix()
+        },
+        {
+            id: 32,
+            title: 'Кофемашина DeLonghi Magnifica S',
+            price: 34990,
+            marketplace: 'avito',
+            seller: {
+                name: 'БытТехника',
+                rating: 4.6,
+                reviews: 8760,
+                reputation: 'good'
+            },
+            image: 'https://a.avito.st/i/original/0/12/01234567890123456.jpg',
+            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
+        },
+        {
+            id: 33,
+            title: 'Увлажнитель воздуха Ballu UHB-990',
+            price: 4990,
+            marketplace: 'ozon',
+            seller: {
+                name: 'Ballu Official',
+                rating: 4.7,
+                reviews: 6540,
+                reputation: 'good'
+            },
+            image: 'https://ir.ozone.ru/s3/multimedia-j/wc1000/171012345678901234.jpg',
+            url: CONFIG.marketplaces.ozon.baseUrl + '/category/humidifiers-15502/' + CONFIG.marketplaces.ozon.getFilterSuffix()
+        },
+        {
+            id: 34,
+            title: 'Электрический чайник Kitfort KT-680',
+            price: 2490,
+            marketplace: 'wildberries',
+            seller: {
+                name: 'Kitfort Store',
+                rating: 4.5,
+                reviews: 4320,
+                reputation: 'good'
+            },
+            image: 'https://basket-19.wbbasket.ru/vol3456/part345678/345678902/images/big/1.webp',
+            url: CONFIG.marketplaces.wildberries.baseUrl + '/catalog/0/search.aspx' + CONFIG.marketplaces.wildberries.getFilterSuffix()
+        },
+        {
+            id: 35,
+            title: 'Фен для волос Dyson Supersonic',
+            price: 39990,
+            marketplace: 'avito',
+            seller: {
+                name: 'BeautyTech',
+                rating: 4.8,
+                reviews: 5670,
+                reputation: 'good'
+            },
+            image: 'https://a.avito.st/i/original/1/23/12345678901234567.jpg',
+            url: CONFIG.marketplaces.avito.baseUrl + '/rossiya' + CONFIG.marketplaces.avito.getFilterSuffix()
+        }
     ]
 };
 
