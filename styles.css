@@ -236,7 +236,7 @@ header h1 {
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
 }
@@ -248,6 +248,18 @@ header h1 {
 
 .category-btn i {
     font-size: 1.1rem;
+}
+
+/* Стили для кнопок с несколькими иконками */
+.category-btn[data-category="игры"],
+.category-btn[data-category="товары"] {
+    justify-content: space-between;
+}
+
+.category-btn .icon-left,
+.category-btn .icon-right {
+    display: inline-flex;
+    align-items: center;
 }
 
 .search-section {
