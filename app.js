@@ -51,7 +51,7 @@ const products = [
         category: 'currency',
         price: 450,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowgold/400/300',
         description: 'Быстрая доставка золота в течение 30 минут',
         popular: true
     },
@@ -62,7 +62,7 @@ const products = [
         category: 'items',
         price: 2500,
         seller: sellers[1],
-        image: 'https://images.unsplash.com/photo-1642430065844-7c2dc8a7ab2a?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowmount/400/300',
         description: 'Редкий маунт с уникальным внешним видом'
     },
     {
@@ -72,7 +72,7 @@ const products = [
         category: 'boosting',
         price: 3500,
         seller: sellers[2],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowraid/400/300',
         description: 'Профессиональный буст ключей до 20 уровня'
     },
     {
@@ -82,7 +82,7 @@ const products = [
         category: 'accounts',
         price: 8900,
         seller: sellers[5],
-        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowacc/400/300',
         description: 'Полный доступ, почта и телефон привязаны'
     },
     
@@ -94,7 +94,7 @@ const products = [
         category: 'items',
         price: 4200,
         seller: sellers[4],
-        image: 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/csak47/400/300',
         description: 'Чистый флоут 0.18, без царапин',
         popular: true
     },
@@ -105,7 +105,7 @@ const products = [
         category: 'items',
         price: 125000,
         seller: sellers[1],
-        image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/csawp/400/300',
         description: 'Легендарная снайперская винтовка'
     },
     {
@@ -115,7 +115,7 @@ const products = [
         category: 'services',
         price: 1200,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/csprime/400/300',
         description: 'Активация Prime статуса за 5 минут'
     },
     {
@@ -125,7 +125,7 @@ const products = [
         category: 'boosting',
         price: 5500,
         seller: sellers[2],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/csboost/400/300',
         description: 'Буст по вашему аккаунту или на буст аккаунте'
     },
     
@@ -137,7 +137,7 @@ const products = [
         category: 'items',
         price: 2800,
         seller: sellers[4],
-        image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/dotaarcana/400/300',
         description: 'Новая Arcana с анимациями и эффектами'
     },
     {
@@ -147,7 +147,7 @@ const products = [
         category: 'boosting',
         price: 4500,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/dotaboost/400/300',
         description: 'Профессиональный буст рейтинга'
     },
     {
@@ -157,7 +157,7 @@ const products = [
         category: 'items',
         price: 350,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/dotatreasure/400/300',
         description: 'Свежие сокровищницы с новыми предметами'
     },
     
@@ -169,7 +169,7 @@ const products = [
         category: 'currency',
         price: 680,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/lostarkgold/400/300',
         description: 'Золото сервера Арузия, быстрая доставка'
     },
     {
@@ -179,7 +179,7 @@ const products = [
         category: 'boosting',
         price: 7500,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/lostarkboost/400/300',
         description: 'Полное прохождение контента до 1490 ilvl'
     },
     {
@@ -189,7 +189,7 @@ const products = [
         category: 'accounts',
         price: 12000,
         seller: sellers[5],
-        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/lostarkacc/400/300',
         description: 'Развитый аккаунт с полным набором экипировки'
     },
     
@@ -201,7 +201,7 @@ const products = [
         category: 'currency',
         price: 3200,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/poeorb/400/300',
         description: 'Валюта для лиги 3.23, мгновенная доставка'
     },
     {
@@ -211,7 +211,7 @@ const products = [
         category: 'boosting',
         price: 2500,
         seller: sellers[2],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/poeboost/400/300',
         description: 'Быстрый подъем уровня любым билдом'
     },
     
@@ -223,7 +223,7 @@ const products = [
         category: 'currency',
         price: 1800,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/tarkovrub/400/300',
         description: 'Рубли на любом сервере, безопасно'
     },
     {
@@ -233,7 +233,7 @@ const products = [
         category: 'boosting',
         price: 4000,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/tarkovkd/400/300',
         description: 'Поднимем ваш KD до нужного значения'
     },
     {
@@ -243,7 +243,7 @@ const products = [
         category: 'accounts',
         price: 15000,
         seller: sellers[5],
-        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/tarkoveod/400/300',
         description: 'Полное издание с всеми DLC и бонусами'
     },
     
@@ -255,7 +255,7 @@ const products = [
         category: 'currency',
         price: 950,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/genshinprimogem/400/300',
         description: 'Премиум валюта для молитв',
         popular: true
     },
@@ -266,7 +266,7 @@ const products = [
         category: 'accounts',
         price: 25000,
         seller: sellers[5],
-        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/genshinacc/400/300',
         description: 'Жуэли, Ху Тао, Райдэн и другие топовые персонажи'
     },
     {
@@ -276,7 +276,7 @@ const products = [
         category: 'services',
         price: 800,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/genshinfarm/400/300',
         description: 'Ежедневный фарм смолы и ресурсов'
     },
     
@@ -288,7 +288,7 @@ const products = [
         category: 'currency',
         price: 550,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/l2adena/400/300',
         description: 'Адена на любом официальном сервере'
     },
     {
@@ -298,7 +298,7 @@ const products = [
         category: 'accounts',
         price: 18000,
         seller: sellers[5],
-        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/l2acc/400/300',
         description: 'Топовый аккаунт с полной экипировкой'
     },
     {
@@ -308,7 +308,7 @@ const products = [
         category: 'boosting',
         price: 3000,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/l2olymp/400/300',
         description: 'Набивка очков олимпиады для получения статуса Героя'
     },
     
@@ -320,7 +320,7 @@ const products = [
         category: 'items',
         price: 5500,
         seller: sellers[1],
-        image: 'https://images.unsplash.com/photo-1642430065844-7c2dc8a7ab2a?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowsword/400/300',
         description: 'Легендарное оружие с уникальными свойствами'
     },
     {
@@ -330,7 +330,7 @@ const products = [
         category: 'items',
         price: 285000,
         seller: sellers[1],
-        image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/csm4a4/400/300',
         description: 'Контрабандная винтовка в идеальном состоянии'
     },
     {
@@ -340,7 +340,7 @@ const products = [
         category: 'items',
         price: 1200,
         seller: sellers[4],
-        image: 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowtransmog/400/300',
         description: 'Полный сет редкого трансмога'
     },
     {
@@ -350,7 +350,7 @@ const products = [
         category: 'services',
         price: 1500,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/dotacoach/400/300',
         description: 'Персональное обучение от топ игрока'
     },
     {
@@ -360,7 +360,7 @@ const products = [
         category: 'currency',
         price: 2100,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wowgold5k/400/300',
         description: 'Большой пакет золота со скидкой'
     },
     
@@ -372,7 +372,7 @@ const products = [
         category: 'currency',
         price: 380,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/albionsilver/400/300',
         description: 'Серебро на любом сервере, быстрая доставка'
     },
     {
@@ -382,7 +382,7 @@ const products = [
         category: 'services',
         price: 1200,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/albionprem/400/300',
         description: 'Активация премиум статуса на месяц'
     },
     {
@@ -392,7 +392,7 @@ const products = [
         category: 'accounts',
         price: 4500,
         seller: sellers[5],
-        image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/albionacc/400/300',
         description: 'Развитый аккаунт с экипировкой'
     },
     
@@ -404,7 +404,7 @@ const products = [
         category: 'currency',
         price: 450,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/d2brightdust/400/300',
         description: 'Валюта для покупки косметики'
     },
     {
@@ -414,7 +414,7 @@ const products = [
         category: 'boosting',
         price: 3200,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/d2powerlevel/400/300',
         description: 'Прокачка уровня силы'
     },
     {
@@ -424,7 +424,7 @@ const products = [
         category: 'items',
         price: 1800,
         seller: sellers[4],
-        image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/d2exotic/400/300',
         description: 'Любое экзотическое оружие'
     },
     
@@ -436,7 +436,7 @@ const products = [
         category: 'currency',
         price: 650,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wfplatinum/400/300',
         description: 'Премиум валюта для покупок'
     },
     {
@@ -446,7 +446,7 @@ const products = [
         category: 'items',
         price: 2200,
         seller: sellers[1],
-        image: 'https://images.unsplash.com/photo-1642430065844-7c2dc8a7ab2a?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wfbaruuk/400/300',
         description: 'Прайм варфрейм в комплекте'
     },
     {
@@ -456,7 +456,7 @@ const products = [
         category: 'services',
         price: 900,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/wffarm/400/300',
         description: 'Ежедневный фарм ресурсов и кредитов'
     },
     
@@ -468,7 +468,7 @@ const products = [
         category: 'currency',
         price: 1500,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/d4gold/400/300',
         description: 'Золото для любых нужд'
     },
     {
@@ -478,7 +478,7 @@ const products = [
         category: 'boosting',
         price: 4800,
         seller: sellers[2],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/d4boost/400/300',
         description: 'Максимальный уровень за вас'
     },
     {
@@ -488,7 +488,7 @@ const products = [
         category: 'items',
         price: 3500,
         seller: sellers[4],
-        image: 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/d4legendary/400/300',
         description: 'Полный комплект легендарок'
     },
     
@@ -500,7 +500,7 @@ const products = [
         category: 'currency',
         price: 890,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/ff14gil/400/300',
         description: 'Игровая валюта Gil'
     },
     {
@@ -510,7 +510,7 @@ const products = [
         category: 'boosting',
         price: 2800,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/ff14job/400/300',
         description: 'Прокачка любой профессии'
     },
     {
@@ -520,7 +520,7 @@ const products = [
         category: 'items',
         price: 4200,
         seller: sellers[1],
-        image: 'https://images.unsplash.com/photo-1642430065844-7c2dc8a7ab2a?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/ff14mount/400/300',
         description: 'Эксклюзивный транспорт'
     },
     
@@ -532,7 +532,7 @@ const products = [
         category: 'currency',
         price: 2100,
         seller: sellers[3],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/poe2divine/400/300',
         description: 'Валюта для крафта'
     },
     {
@@ -542,7 +542,7 @@ const products = [
         category: 'boosting',
         price: 2900,
         seller: sellers[2],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/poe2boost/400/300',
         description: 'Быстрый подъем уровня'
     },
     
@@ -554,7 +554,7 @@ const products = [
         category: 'currency',
         price: 720,
         seller: sellers[0],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/tlsolarium/400/300',
         description: 'Основная валюта игры'
     },
     {
@@ -564,7 +564,7 @@ const products = [
         category: 'boosting',
         price: 3800,
         seller: sellers[6],
-        image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/tlboost/400/300',
         description: 'Прокачка до максимального уровня'
     },
     
@@ -576,7 +576,7 @@ const products = [
         category: 'currency',
         price: 580,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/ohingot/400/300',
         description: 'Редкая валюта для крафта'
     },
     {
@@ -586,7 +586,7 @@ const products = [
         category: 'items',
         price: 2400,
         seller: sellers[4],
-        image: 'https://images.unsplash.com/photo-1614289371518-722f2615943d?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/ohweapon/400/300',
         description: 'Мощное оружие для выживания'
     },
     {
@@ -596,7 +596,7 @@ const products = [
         category: 'services',
         price: 950,
         seller: sellers[7],
-        image: 'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400&h=300&fit=crop',
+        image: 'https://picsum.photos/seed/ohhelp/400/300',
         description: 'Помощь в старте и развитии базы'
     }
 ];
@@ -675,6 +675,34 @@ function setupEventListeners() {
     
     // Фильтры
     applyFiltersBtn.addEventListener('click', applyFilters);
+    
+    // Автоматическое применение фильтров при изменении чекбоксов игр
+    document.querySelectorAll('input[name="game"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const checkboxes = document.querySelectorAll('input[name="game"]:checked');
+            state.selectedGames = Array.from(checkboxes).map(cb => cb.value);
+            renderProducts();
+        });
+    });
+    
+    // Автоматическое применение фильтра цены
+    document.getElementById('minPrice').addEventListener('input', () => {
+        state.minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+        renderProducts();
+    });
+    
+    document.getElementById('maxPrice').addEventListener('input', () => {
+        state.maxPrice = parseFloat(document.getElementById('maxPrice').value) || 100000;
+        renderProducts();
+    });
+    
+    // Автоматическое применение фильтра рейтинга
+    document.querySelectorAll('input[name="rating"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            state.minRating = radio.value === 'all' ? 0 : parseFloat(radio.value);
+            renderProducts();
+        });
+    });
     
     // Загрузить ещё
     loadMoreBtn.addEventListener('click', () => {
