@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поиск лучших цен - Ozon, Avito, Wildberries</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -12,6 +13,65 @@
             <h1>🔍 Поиск лучших цен</h1>
             <p class="subtitle">Находим товары на Ozon, Avito и Wildberries с учётом репутации продавца</p>
         </header>
+
+        <nav class="auth-nav">
+            <div id="authButtons">
+                <button id="loginBtn" class="auth-btn">Войти</button>
+                <button id="registerBtn" class="auth-btn register-btn">Регистрация</button>
+            </div>
+            <div id="userPanel" class="hidden">
+                <span id="userName" class="user-name"></span>
+                <button id="logoutBtn" class="auth-btn logout-btn">Выйти</button>
+            </div>
+        </nav>
+
+        <!-- Модальное окно регистрации -->
+        <div id="registerModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Регистрация</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="regName"><i class="fas fa-user"></i> Имя</label>
+                        <input type="text" id="regName" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="regEmail" placeholder="example@mail.ru" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword"><i class="fas fa-lock"></i> Пароль</label>
+                        <input type="password" id="regPassword" placeholder="Минимум 6 символов" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword"><i class="fas fa-lock"></i> Подтвердите пароль</label>
+                        <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                </form>
+                <p class="switch-auth">Уже есть аккаунт? <a href="#" id="showLogin">Войти</a></p>
+            </div>
+        </div>
+
+        <!-- Модальное окно входа -->
+        <div id="loginModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Вход</h2>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="loginEmail" placeholder="example@mail.ru" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword"><i class="fas fa-lock"></i> Пароль</label>
+                        <input type="password" id="loginPassword" placeholder="Ваш пароль" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Войти</button>
+                </form>
+                <p class="switch-auth">Нет аккаунта? <a href="#" id="showRegister">Зарегистрироваться</a></p>
+            </div>
+        </div>
 
         <div class="search-section">
             <form id="searchForm" class="search-form">
@@ -24,6 +84,20 @@
                 >
                 <button type="submit" class="search-btn">Найти</button>
             </form>
+        </div>
+
+        <div class="categories">
+            <h3>Популярные категории:</h3>
+            <div class="category-buttons">
+                <button class="category-btn" data-category="iphone"><i class="fas fa-mobile-alt"></i> iPhone</button>
+                <button class="category-btn" data-category="ноутбук"><i class="fas fa-laptop"></i> Ноутбуки</button>
+                <button class="category-btn" data-category="наушники"><i class="fas fa-headphones"></i> Наушники</button>
+                <button class="category-btn" data-category="игры"><i class="fas fa-gamepad"></i> Игры</button>
+                <button class="category-btn" data-category="playstation"><i class="fas fa-playstation"></i> PlayStation</button>
+                <button class="category-btn" data-category="xbox"><i class="fab fa-xbox"></i> Xbox</button>
+                <button class="category-btn" data-category="камера"><i class="fas fa-camera"></i> Камеры</button>
+                <button class="category-btn" data-category="часы"><i class="fas fa-clock"></i> Умные часы</button>
+            </div>
         </div>
 
         <div id="loading" class="loading hidden">
